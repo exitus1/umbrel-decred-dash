@@ -2,7 +2,7 @@ import { NodeStatus } from "@/components/NodeStatus";
 import { MetricCard } from "@/components/MetricCard";
 import { BlockchainInfo } from "@/components/BlockchainInfo";
 import { PeersList } from "@/components/PeersList";
-import { SystemHealth } from "@/components/SystemHealth";
+import { RPCConnection } from "@/components/RPCConnection";
 import { Users, Layers, TrendingUp, Zap, Coins } from "lucide-react";
 import decredLogo from "@/assets/decred-logo.jpg";
 
@@ -68,7 +68,7 @@ const Index = () => {
         {/* Details Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <BlockchainInfo />
-          <SystemHealth />
+          <RPCConnection />
         </div>
 
         {/* Peers List */}
