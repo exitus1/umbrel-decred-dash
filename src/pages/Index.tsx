@@ -32,7 +32,7 @@ const Index = () => {
         </div>
 
         {/* Node Status */}
-        <NodeStatus status="syncing" syncProgress={87} />
+        <NodeStatus status="running" syncProgress={100} />
 
         {/* Metrics Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
