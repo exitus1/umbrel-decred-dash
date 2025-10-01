@@ -1,11 +1,69 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { NodeStatus } from "@/components/NodeStatus";
+import { MetricCard } from "@/components/MetricCard";
+import { BlockchainInfo } from "@/components/BlockchainInfo";
+import { PeersList } from "@/components/PeersList";
+import { SystemHealth } from "@/components/SystemHealth";
+import { Users, Layers, TrendingUp, Zap } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-background p-6">
+      <div className="max-w-7xl mx-auto space-y-6">
+        {/* Header */}
+        <div className="flex items-center justify-between mb-8 animate-fade-in">
+          <div>
+            <h1 className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
+              Decred Node
+            </h1>
+            <p className="text-muted-foreground">Monitor your dcrd node performance and network status</p>
+          </div>
+          <div className="px-4 py-2 rounded-lg bg-primary/10 border border-primary/20 backdrop-blur-sm">
+            <p className="text-sm text-muted-foreground">Version</p>
+            <p className="text-lg font-semibold text-primary">v1.8.0</p>
+          </div>
+        </div>
+
+        {/* Node Status */}
+        <NodeStatus status="running" />
+
+        {/* Metrics Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <MetricCard
+            title="Network Peers"
+            value={8}
+            subtitle="Connected nodes"
+            icon={Users}
+            trend={{ value: "+2 today", isPositive: true }}
+          />
+          <MetricCard
+            title="Block Height"
+            value="856,234"
+            subtitle="Latest block"
+            icon={Layers}
+          />
+          <MetricCard
+            title="Network Hashrate"
+            value="452 PH/s"
+            subtitle="Total network power"
+            icon={TrendingUp}
+            trend={{ value: "+5.2%", isPositive: true }}
+          />
+          <MetricCard
+            title="Transactions"
+            value="1,432"
+            subtitle="Last 24 hours"
+            icon={Zap}
+          />
+        </div>
+
+        {/* Details Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <BlockchainInfo />
+          <SystemHealth />
+        </div>
+
+        {/* Peers List */}
+        <PeersList />
       </div>
     </div>
   );
