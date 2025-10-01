@@ -58,16 +58,22 @@ export const NodeStatus = ({ status, syncProgress = 0 }: NodeStatusProps) => {
       </div>
       
       {status === "syncing" && (
-        <div className="mt-4">
-          <div className="flex items-center justify-between text-sm mb-2">
-            <span className="text-muted-foreground">Sync Progress</span>
-            <span className="text-foreground font-medium">{syncProgress}%</span>
+        <div className="mt-6 space-y-2">
+          <div className="flex items-center justify-between text-sm">
+            <span className="text-muted-foreground font-medium">Blockchain Sync Progress</span>
+            <span className="text-foreground font-bold text-lg">{syncProgress}%</span>
           </div>
-          <div className="h-2 bg-muted rounded-full overflow-hidden">
+          <div className="relative h-3 bg-muted rounded-full overflow-hidden border border-border/50">
             <div 
-              className="h-full bg-gradient-primary transition-all duration-300"
+              className="h-full bg-gradient-primary transition-all duration-500 ease-out relative overflow-hidden"
               style={{ width: `${syncProgress}%` }}
-            />
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse" />
+            </div>
+          </div>
+          <div className="flex items-center justify-between text-xs text-muted-foreground">
+            <span>Block: {Math.floor((syncProgress / 100) * 856234)}</span>
+            <span>Target: 856,234</span>
           </div>
         </div>
       )}
