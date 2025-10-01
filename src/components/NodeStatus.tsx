@@ -52,9 +52,11 @@ export const NodeStatus = ({ status, syncProgress = 0 }: NodeStatusProps) => {
             <p className="text-sm text-muted-foreground">Decred dcrd</p>
           </div>
         </div>
-        <Badge className={`${config.bgColor} ${config.color} border-0`}>
-          {config.label}
-        </Badge>
+        <div className={`px-6 py-3 rounded-xl ${config.bgColor} border-2 ${config.borderColor} ${status === "running" ? "shadow-[0_0_30px_hsl(142_76%_36%/0.4)]" : ""}`}>
+          <span className={`${config.color} font-bold text-lg tracking-wide`}>
+            {config.label}
+          </span>
+        </div>
       </div>
       
       {status === "syncing" && (
