@@ -3,7 +3,7 @@ import { MetricCard } from "@/components/MetricCard";
 import { BlockchainInfo } from "@/components/BlockchainInfo";
 import { PeersList } from "@/components/PeersList";
 import { RPCConnection } from "@/components/RPCConnection";
-import { Users, Layers, TrendingUp, Zap, Coins, Github, Wallet, Lock, DollarSign, Shield } from "lucide-react";
+import { Users, Layers, TrendingUp, Zap, Coins, Github, Wallet, Lock, DollarSign, Shield, Globe } from "lucide-react";
 import decredLogo from "@/assets/decred-logo.jpg";
 import { useQuery } from "@tanstack/react-query";
 
@@ -106,6 +106,14 @@ const Index = () => {
               className="px-4 py-3 rounded-lg bg-primary/10 border border-primary/20 hover:bg-primary/20 transition-all duration-300 hover:shadow-glow-primary flex items-center justify-center"
             >
               <Github className="h-8 w-8 text-primary" />
+            </a>
+            <a
+              href="https://nodes.jholdstock.uk/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-3 rounded-lg bg-primary/10 border border-primary/20 hover:bg-primary/20 transition-all duration-300 hover:shadow-glow-primary flex items-center justify-center"
+            >
+              <Globe className="h-8 w-8 text-primary" />
             </a>
             <div className="px-4 py-2 rounded-lg bg-primary/10 border border-primary/20 backdrop-blur-sm">
               <p className="text-sm text-muted-foreground">Version</p>
