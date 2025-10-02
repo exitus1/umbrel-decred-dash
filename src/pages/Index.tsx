@@ -55,7 +55,7 @@ const Index = () => {
 
   // Calculate metrics
   const circulatingSupply = supplyData 
-    ? (supplyData.supply_mined / 100000000).toFixed(2) + "M"
+    ? (supplyData.supply_mined / 100000000 / 1000000).toFixed(2) + "M"
     : "17.05M";
   
   const stakedSupply = stakePoolData
