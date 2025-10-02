@@ -55,12 +55,12 @@ const Index = () => {
 
   // Calculate metrics
   const circulatingSupply = supplyData 
-    ? (supplyData.supply_mined / 100000000).toFixed(1) + "M"
-    : "16.2M";
+    ? (supplyData.supply_mined / 100000000).toFixed(2) + "M"
+    : "17.05M";
   
   const stakedSupply = stakePoolData
     ? (stakePoolData.value / 1000000).toFixed(2) + "M"
-    : "10.1M";
+    : "10.15M";
   
   const stakedPercent = supplyData && stakePoolData
     ? ((stakePoolData.value / (supplyData.supply_mined / 100000000)) * 100).toFixed(1)
@@ -77,10 +77,8 @@ const Index = () => {
   // Treasury size - using approximate value (would need separate API or scraping)
   const treasurySize = "861.6K";
   
-  // Mixed supply - using approximate percentage of total supply
-  const mixedSupply = supplyData
-    ? ((supplyData.supply_mined / 100000000) * 0.45).toFixed(1) + "M"
-    : "7.7M";
+  // Mixed supply - percentage of total supply
+  const mixedPercent = "62%";
 
   return (
     <div className="min-h-screen bg-background p-6">
@@ -105,9 +103,9 @@ const Index = () => {
               href="https://github.com/decred/dcrd"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-lg bg-primary/10 border border-primary/20 hover:bg-primary/20 transition-all duration-300 hover:shadow-glow-primary"
+              className="px-4 py-3 rounded-lg bg-primary/10 border border-primary/20 hover:bg-primary/20 transition-all duration-300 hover:shadow-glow-primary flex items-center justify-center"
             >
-              <Github className="h-6 w-6 text-primary" />
+              <Github className="h-8 w-8 text-primary" />
             </a>
             <div className="px-4 py-2 rounded-lg bg-primary/10 border border-primary/20 backdrop-blur-sm">
               <p className="text-sm text-muted-foreground">Version</p>
@@ -168,10 +166,10 @@ const Index = () => {
           />
           <MetricCard
             title="Supply Mixed"
-            value={mixedSupply}
+            value={mixedPercent}
             subtitle="Privacy enhanced"
             icon={Shield}
-            trend={{ value: "~45% of supply", isPositive: true }}
+            trend={{ value: "CoinShuffle++", isPositive: true }}
           />
           <MetricCard
             title="Exchange Rate"
