@@ -153,16 +153,14 @@ const Index = () => {
           <MetricCard
             title="Treasury Size"
             value={treasurySize}
-            subtitle="DCR in treasury"
+            subtitle="Self-funded from block reward"
             icon={Wallet}
-            trend={{ value: "Decentralized fund", isPositive: true }}
           />
           <MetricCard
             title="Supply Staked"
             value={stakedSupply}
-            subtitle={`${stakedPercent}% of supply`}
+            subtitle="Stakeholders Rule"
             icon={Lock}
-            trend={{ value: "Securing network", isPositive: true }}
           />
           <MetricCard
             title="Supply Mixed"
