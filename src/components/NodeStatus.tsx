@@ -12,7 +12,7 @@ export const NodeStatus = ({ status, syncProgress = 0 }: NodeStatusProps) => {
     switch (status) {
       case "running":
         return {
-          icon: CheckCircle2,
+          icon: Activity,
           label: "Fully Synced",
           color: "text-success",
           bgColor: "bg-success/10",
