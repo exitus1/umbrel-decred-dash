@@ -26,7 +26,6 @@ export const MetricCard = ({ title, value, subtitle, icon: Icon, trend }: Metric
           )}
           {trend && (
             <div className={`flex items-center gap-1 mt-2 text-xs ${trend.isPositive ? 'text-success' : 'text-destructive'}`}>
-              <span>{trend.isPositive ? '↑' : '↓'}</span>
               <span>{trend.value}</span>
             </div>
           )}
