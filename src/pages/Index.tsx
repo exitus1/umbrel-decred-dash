@@ -3,7 +3,7 @@ import { MetricCard } from "@/components/MetricCard";
 import { BlockchainInfo } from "@/components/BlockchainInfo";
 import { PeersList } from "@/components/PeersList";
 import { RPCConnection } from "@/components/RPCConnection";
-import { Users, Layers, TrendingUp, Zap, Coins, Github, Wallet, Lock, DollarSign, Shield, Globe } from "lucide-react";
+import { Users, Layers, TrendingUp, Zap, Coins, Wallet, Lock, DollarSign, Shield, Globe } from "lucide-react";
 import decredLogo from "@/assets/decred-logo.jpg";
 import { useQuery } from "@tanstack/react-query";
 
@@ -103,14 +103,6 @@ const Index = () => {
           </div>
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com/decred/dcrd"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-3 rounded-lg bg-primary/10 border border-primary/20 hover:bg-primary/20 transition-all duration-300 hover:shadow-glow-primary flex items-center justify-center"
-            >
-              <Github className="h-8 w-8 text-primary" />
-            </a>
-            <a
               href="https://nodes.jholdstock.uk/"
               target="_blank"
               rel="noopener noreferrer"
@@ -118,10 +110,15 @@ const Index = () => {
             >
               <Globe className="h-8 w-8 text-primary" />
             </a>
-            <div className="px-4 py-2 rounded-lg bg-primary/10 border border-primary/20 backdrop-blur-sm">
+            <a
+              href="https://github.com/decred/dcrd"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 rounded-lg bg-primary/10 border border-primary/20 hover:bg-primary/20 transition-all duration-300 hover:shadow-glow-primary backdrop-blur-sm"
+            >
               <p className="text-sm text-muted-foreground">Version</p>
-              <p className="text-lg font-semibold text-primary">v1.8.0</p>
-            </div>
+              <p className="text-lg font-semibold text-primary">v2.0.6</p>
+            </a>
           </div>
         </div>
 
