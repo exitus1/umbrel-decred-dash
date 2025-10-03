@@ -106,9 +106,10 @@ const Index = () => {
               href="https://nodes.jholdstock.uk/"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-3 rounded-lg bg-primary/10 border border-primary/20 hover:bg-primary/20 transition-all duration-300 hover:shadow-glow-primary flex items-center justify-center"
+              className="px-4 py-3 rounded-lg bg-primary/10 border border-primary/20 hover:bg-primary/20 transition-all duration-300 hover:shadow-glow-primary flex items-center gap-2"
             >
-              <Globe className="h-8 w-8 text-primary" />
+              <Globe className="h-6 w-6 text-primary" />
+              <span className="text-primary font-semibold">Node Mapper</span>
             </a>
             <a
               href="https://github.com/decred/dcrd"
