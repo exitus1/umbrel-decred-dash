@@ -109,7 +109,7 @@ const Index = () => {
               rel="noopener noreferrer"
               className="px-4 py-3 rounded-lg bg-primary/10 border border-primary/20 hover:bg-primary/20 transition-all duration-300 hover:shadow-glow-primary flex items-center gap-2"
             >
-              <img src={dcrSymbol} alt="Decred" className="h-6 w-6" />
+              <img src={dcrSymbol} alt="Decred" className="h-10 w-10" />
               <span className="text-primary font-semibold">Node Mapper</span>
             </a>
             <a
