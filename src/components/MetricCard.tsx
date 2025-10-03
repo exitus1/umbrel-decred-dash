@@ -10,9 +10,10 @@ interface MetricCardProps {
     value: string;
     isPositive: boolean;
   };
+  usdValue?: string;
 }
 
-export const MetricCard = ({ title, value, subtitle, icon: Icon, trend }: MetricCardProps) => {
+export const MetricCard = ({ title, value, subtitle, icon: Icon, trend, usdValue }: MetricCardProps) => {
   return (
     <Card className="p-6 bg-gradient-card backdrop-blur-sm border-border/50 hover:border-primary/20 transition-all duration-300 group animate-fade-in">
       <div className="flex items-start justify-between">
@@ -23,6 +24,9 @@ export const MetricCard = ({ title, value, subtitle, icon: Icon, trend }: Metric
           </h3>
           {subtitle && (
             <p className="text-xs text-muted-foreground">{subtitle}</p>
+          )}
+          {usdValue && (
+            <p className="text-sm font-medium text-success mt-2">{usdValue}</p>
           )}
           {trend && (
             <div className={`flex items-center gap-1 mt-2 text-xs ${trend.isPositive ? 'text-success' : 'text-destructive'}`}>

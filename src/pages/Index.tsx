@@ -76,6 +76,9 @@ const Index = () => {
 
   // Treasury size - using approximate value (would need separate API or scraping)
   const treasurySize = "861.6K";
+  const treasurySizeUSD = exchangeRateData
+    ? "$" + (861600 * exchangeRateData.dcrPrice / 1000000).toFixed(2) + "M"
+    : "$15.25M";
   
   // Mixed supply - percentage of total supply
   const mixedPercent = "62%";
@@ -163,6 +166,7 @@ const Index = () => {
             value={treasurySize}
             subtitle="Self-funded from block reward"
             icon={Wallet}
+            usdValue={treasurySizeUSD}
           />
           <MetricCard
             title="Supply Staked"
