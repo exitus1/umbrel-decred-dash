@@ -5,6 +5,7 @@ import { PeersList } from "@/components/PeersList";
 import { RPCConnection } from "@/components/RPCConnection";
 import { Users, Layers, TrendingUp, Zap, Coins, Wallet, Lock, DollarSign, Shield, Globe } from "lucide-react";
 import decredLogo from "@/assets/decred-logo.jpg";
+import dcrSymbol from "@/assets/dcr-symbol.png";
 import { useQuery } from "@tanstack/react-query";
 
 // API functions
@@ -108,7 +109,7 @@ const Index = () => {
               rel="noopener noreferrer"
               className="px-4 py-3 rounded-lg bg-primary/10 border border-primary/20 hover:bg-primary/20 transition-all duration-300 hover:shadow-glow-primary flex items-center gap-2"
             >
-              <Globe className="h-6 w-6 text-primary" />
+              <img src={dcrSymbol} alt="Decred" className="h-6 w-6" />
               <span className="text-primary font-semibold">Node Mapper</span>
             </a>
             <a
