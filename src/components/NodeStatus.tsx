@@ -49,7 +49,7 @@ export const NodeStatus = ({ status, syncProgress = 0 }: NodeStatusProps) => {
           </div>
           <div>
             <h3 className="text-lg font-semibold text-foreground">Node Status</h3>
-            <p className="text-sm text-muted-foreground">Decred dcrd</p>
+            <p className="text-sm text-muted-foreground">Decred</p>
           </div>
         </div>
         <div className={`px-6 py-3 rounded-xl ${config.bgColor} border-2 ${config.borderColor} ${status === "running" ? "shadow-[0_0_30px_hsl(142_76%_36%/0.4)]" : ""}`}>
