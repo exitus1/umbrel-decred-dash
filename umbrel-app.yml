@@ -1,0 +1,36 @@
+manifestVersion: 1
+id: decred-dashboard
+name: Decred Dashboard
+tagline: Modern dashboard for monitoring your Decred dcrd node
+icon: https://raw.githubusercontent.com/decred/dcrdata/master/public/images/decred-logo.png
+category: finance
+version: "1.0.0"
+port: 3010
+description: >-
+  A beautiful, modern dashboard for monitoring your Decred (dcrd) node on Umbrel.
+  
+  Features:
+  - Real-time node status monitoring
+  - Blockchain information and metrics
+  - Connected peers list
+  - Network statistics
+  - RPC connection status
+  
+  This dashboard provides an intuitive interface to keep track of your Decred node's health and performance.
+
+developer: Decred Community
+website: https://decred.org
+repo: https://github.com/yourusername/umbrel-decred-dashboard
+support: https://github.com/yourusername/umbrel-decred-dashboard/issues
+gallery:
+  - https://raw.githubusercontent.com/yourusername/umbrel-decred-dashboard/main/screenshot.png
+
+releaseNotes: >-
+  Initial release of Decred Dashboard for Umbrel.
+
+dependencies: []
+
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
