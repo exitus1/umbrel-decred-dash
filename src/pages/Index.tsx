@@ -7,6 +7,7 @@ import { Users, Layers, TrendingUp, Zap, Coins, Wallet, Lock, DollarSign, Shield
 import decredLogo from "@/assets/decred-logo.jpg";
 import dcrSymbol from "@/assets/dcr-symbol.png";
 import { useQuery } from "@tanstack/react-query";
+import { Link } from "react-router-dom";
 
 // API functions
 const fetchSupply = async () => {
@@ -103,6 +104,13 @@ const Index = () => {
             </div>
           </div>
           <div className="flex items-center gap-4">
+            <Link
+              to="/stakeshuffle"
+              className="px-4 py-3 rounded-lg bg-secondary/10 border border-secondary/20 hover:bg-secondary/20 transition-all duration-300 hover:shadow-glow-secondary flex items-center gap-2"
+            >
+              <Shield className="h-5 w-5 text-secondary" />
+              <span className="text-secondary font-semibold">StakeShuffle++</span>
+            </Link>
             <a
               href="https://nodes.jholdstock.uk/"
               target="_blank"
